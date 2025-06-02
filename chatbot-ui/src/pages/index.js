@@ -24,7 +24,6 @@ export default function Home() {
     setLoading(true)
 
     try {
-      await axios.post('http://localhost:5000/chat', { message })
       const res = await axios.post('http://localhost:5000/chat', { message })
       if (!res.data || !res.data.response) {
         throw new Error('Invalid response from server')

@@ -28,7 +28,6 @@ export default function Home() {
       if (!res.data || !res.data.response) {
         throw new Error('Invalid response from server')
       }
-      // Append bot response to chat
       setChat([...newChat, { sender: 'bot', text: res.data.response }])
     } catch (err) {
       console.error(err)
